@@ -1,0 +1,95 @@
+# ML Trading System Requirements
+# Core Python dependencies for the 3-stage ML trading pipeline
+
+# Data Processing and Analysis
+pandas>=1.5.0
+numpy>=1.21.0
+scipy>=1.9.0
+
+# Machine Learning - Deep Learning (Stage 1: LSTM)
+tensorflow>=2.10.0
+keras>=2.10.0
+
+# Machine Learning - Traditional ML (Stage 2: Random Forest)
+scikit-learn>=1.1.0
+
+# Reinforcement Learning (Stage 3: RL Agent)
+stable-baselines3>=1.7.0
+gym>=0.21.0
+gymnasium>=0.26.0
+
+# Data Visualization and Plotting
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.10.0
+
+# Data Preprocessing and Feature Engineering
+TA-Lib>=0.4.24  # Technical Analysis Library (optional, for advanced indicators)
+
+# Utilities and Performance
+tqdm>=4.64.0  # Progress bars
+joblib>=1.1.0  # Parallel processing
+psutil>=5.9.0  # System monitoring
+
+# Development and Testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+black>=22.0.0  # Code formatting
+flake8>=4.0.0  # Linting
+
+# Logging and Monitoring
+tensorboard>=2.10.0  # For RL training monitoring
+
+# Optional: Enhanced data handling
+pyarrow>=8.0.0  # For parquet file support
+fastparquet>=0.8.0  # Alternative parquet engine
+
+# Optional: Financial data APIs (if needed for data collection)
+yfinance>=0.1.87  # Yahoo Finance API
+alpha_vantage>=2.3.1  # Alpha Vantage API
+quandl>=3.7.0  # Quandl API
+
+# Optional: Advanced optimization
+optuna>=3.0.0  # Hyperparameter optimization
+hyperopt>=0.2.7  # Alternative hyperparameter optimization
+
+# System and Environment
+python-dotenv>=0.20.0  # Environment variable management
+
+# Memory and Performance Optimization
+memory_profiler>=0.60.0  # Memory usage profiling
+
+# Data Validation
+pandera>=0.13.0  # Data validation framework
+
+# Time Series Specific
+statsmodels>=0.13.0  # Statistical models
+arch>=5.3.0  # ARCH/GARCH models for volatility
+
+# Jupyter Notebook Support (for development and analysis)
+jupyter>=1.0.0
+ipykernel>=6.15.0
+ipywidgets>=7.7.0
+
+# Configuration Management
+pyyaml>=6.0  # YAML configuration files
+configparser>=5.2.0  # INI configuration files
+
+# Parallel Processing
+multiprocessing-logging>=0.3.4  # Safe logging in multiprocessing
+
+# GPU Support (optional, for faster training)
+# Uncomment if you have NVIDIA GPU and want to use CUDA
+# tensorflow-gpu>=2.10.0
+
+# Note: Some packages may require specific installation procedures:
+# 
+# TA-Lib installation:
+# - Windows: pip install TA-Lib (may require Visual C++ build tools)
+# - macOS: brew install ta-lib && pip install TA-Lib
+# - Linux: sudo apt-get install libta-lib-dev && pip install TA-Lib
+#
+# For GPU support:
+# 1. Install CUDA toolkit and cuDNN
+# 2. Install tensorflow-gpu instead of tensorflow
+# 3. Verify GPU is detected: python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
